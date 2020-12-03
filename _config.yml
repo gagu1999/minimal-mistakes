@@ -5,23 +5,32 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+#우선 구글에 config 파일에 대해 쳐봤음. 위에 써있는 것처럼 이 프로젝트에서 쭉 사용할 구성요소들... ex)변수라든지 등등 
+# 을 미리 세팅해놓는 파일이 바로 config파일임. 여기서 한번 정해놓으면 이 프로젝트를 진행하는 동안에는 그냥 가져다 쓰기만 하면 돼. 
+# 그리고 형식이 .yml로 저장되어 있는데 yml은 yaml의 약자로 이러이러한 포멧으로 내용을 저장해 놓겠다는 거야. 이게 무슨 소리냐면 
+#투수가 던지는거에 오버핸드, 사이드암, 쓰리쿼터 이런게 있듯이 자료를 저장하는 포멧도 여러가지가 있는데 
+# Xml이나 Json, yml등등 근데 보면 yml 이 제일 가독성도 좋고 깔끔한 포멧이야. 그래서 요즘은 대부분 yml로 저장해서 사용한다고 함. 
+
 # Theme Settings
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+# 여기서는 Theme을 정해야해. theme을 쓰려면 gem을 설치해야하니깐 일단은 설치없이 사용가능한 remote_theme을 사용해보자.
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# 뒤에 배경색으로 사용할 수 있는 변수들을 선언해놨네. 여기서는 선언만 해놓고, 구체적으로 변수가 어떤 색을 가지는지에 대해서는
+#다른 파일에서 지정해줄 것 같다.
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+locale                   : "en-US" # _data/ui-test.yml 파일에 언어별 패치가 다 써져있음. 여기서는 그중에 어떤 언어를 사용할지 고르는 거야. 지금은 영어로 되어있음. 
+title                    : "Site Title" # 위에 인터넷 창에 뜨는 제목을 말함. 
+title_separator          : "-" # 아직은 정확히 뭐하는 건지 모르겠음
+subtitle                 : # site tagline that appears below site title in masthead // masthead는 출판물의 제목같은걸 쓰는 곳을 말하는데 여기서는 홈페이지 열었을때 좌측 상단에 나오는 제목을 말함.
+name                     : "Your Name" # 내 이름 쓰면 되고
+description              : "An amazing website." # 간단한 설명 쓰는 곳 같은데 어디에 나오는 건지는 아직 모르겠어.
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io" #기본이 되는 hostname과 protocol임
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
